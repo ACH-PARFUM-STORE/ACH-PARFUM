@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>السلة وإتمام الطلب — ACH PARFUM</title>
+<meta name="description" content="سلة المشتريات وإتمام الطلب في ACH PARFUM.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23c9a24b' font-family='serif'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="container">
+  <div class="page-head"><h1>سلة المشتريات</h1></div>
+  <div id="empty" class="empty hidden">سلتك فارغة.<br><br><a class="btn" href="shop.html">تصفّح العطور</a></div>
+  <div id="done" class="success hidden"></div>
+  <div class="cart-wrap" id="cart-wrap">
+    <div class="panel-box">
+      <div id="items"><div class="loader"></div></div>
+      <div id="cart-warn"></div>
+      <div class="total-line"><span>المجموع</span><span id="total">0</span></div>
+    </div>
+    <form class="panel-box" id="checkout" novalidate>
+      <h3>بيانات التوصيل</h3>
+      <p class="muted" style="margin-top:-6px;font-size:14px">لا تحتاج إلى حساب لإتمام الطلب. سنتصل بك لتأكيده.</p>
+      <div id="form-msg"></div>
+      <div class="grid2">
+        <div class="field"><label class="lbl" for="c-first">الاسم</label><input class="input" id="c-first" autocomplete="given-name" maxlength="80" required></div>
+        <div class="field"><label class="lbl" for="c-last">اللقب</label><input class="input" id="c-last" autocomplete="family-name" maxlength="80" required></div>
+      </div>
+      <div class="field"><label class="lbl" for="c-phone">رقم الهاتف</label><input class="input" id="c-phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" dir="ltr" required></div>
+      <div class="field"><label class="lbl" for="c-address">العنوان</label><textarea class="input" id="c-address" autocomplete="street-address" maxlength="400" required></textarea></div>
+      <div class="field"><label class="lbl" for="c-note">ملاحظات (اختياري)</label><input class="input" id="c-note" maxlength="500"></div>
+      <button class="btn btn-block" id="submit" type="submit">تأكيد الطلب</button>
+    </form>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

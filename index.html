@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACH PARFUM — عطور مركّبة حسب الطلب</title>
+<meta name="description" content="متجر ACH PARFUM: عطور مركّبة حسب الطلب، اختر العطر والتركيز والحجم، واكتشف عطرك عبر النوتات والعائلات العطرية.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23c9a24b' font-family='serif'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main id="home-content">
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Signature Blends</div>
+      <h1>عطرك <em>كما تحبّه</em>،<br>بتركيزك وحجمك</h1>
+      <p>نركّب لك أرقى العطور من الزيوت الأصلية ونعبّئها في الحجم الذي تختاره. اكتشف عطرك بالنوتات والعائلات العطرية.</p>
+      <form class="hero-search" id="hero-search">
+        <input id="hero-q" class="input" type="search" placeholder="ابحث عن عطر أو ماركة...">
+        <button class="btn" type="submit">بحث</button>
+      </form>
+      <div class="hero-links">
+        <a class="btn btn-ghost btn-sm" href="shop.html#notes">ابحث بالنوتات العطرية</a>
+        <a class="btn btn-ghost btn-sm" href="shop.html">تصفّح كل العطور</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured-sec">
+    <div class="container">
+      <div class="section-head"><h2>عطور مميزة</h2><a class="link-more" href="shop.html">عرض الكل ←</a></div>
+      <div class="grid" id="featured"><div class="loader"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="notes" style="background:#0d0c08;border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head"><h2>النوتات العطرية</h2><a class="link-more" href="shop.html#notes">بحث متعدد النوتات ←</a></div>
+      <p class="muted" style="margin-top:-10px">اضغط على أي نوتة لتظهر لك كل العطور التي تحتويها.</p>
+      <div class="notes-row" id="notes-row"><div class="loader"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="newest-sec">
+    <div class="container">
+      <div class="section-head"><h2>أحدث العطور</h2><a class="link-more" href="shop.html">عرض الكل ←</a></div>
+      <div class="grid" id="newest"><div class="loader"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="families" style="background:#0d0c08;border-top:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head"><h2>العائلات العطرية</h2></div>
+      <div class="fam-grid" id="fam-grid"><div class="loader"></div></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

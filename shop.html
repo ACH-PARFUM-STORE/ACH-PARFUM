@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>العطور — ACH PARFUM</title>
+<meta name="description" content="تصفّح عطور ACH PARFUM وابحث بالنوتات والعائلات العطرية.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23c9a24b' font-family='serif'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="container">
+  <div class="page-head">
+    <h1>عطورنا</h1>
+    <p class="muted">ابحث بالاسم، أو اختر نوتاتك المفضلة وسنرتّب لك العطور الأقرب لذوقك.</p>
+  </div>
+
+  <section class="filters">
+    <div class="filter-row">
+      <div class="field"><label class="lbl" for="f-q">بحث</label>
+        <input id="f-q" class="input" type="search" placeholder="اسم العطر أو الماركة..."></div>
+      <div class="field"><label class="lbl" for="f-family">العائلة العطرية</label>
+        <select id="f-family" class="input"><option value="">الكل</option></select></div>
+      <div class="field"><label class="lbl" for="f-brand">الماركة</label>
+        <select id="f-brand" class="input"><option value="">الكل</option></select></div>
+      <div class="field"><label class="lbl" for="f-sort">الترتيب</label>
+        <select id="f-sort" class="input">
+          <option value="relevance">الأنسب</option>
+          <option value="newest">الأحدث</option>
+          <option value="price-asc">السعر: الأقل أولاً</option>
+          <option value="price-desc">السعر: الأعلى أولاً</option>
+          <option value="name">الاسم (A-Z)</option>
+        </select></div>
+      <label class="check field"><input type="checkbox" id="f-avail"> المتوفر فقط</label>
+    </div>
+
+    <details class="panel" id="notes-panel" open>
+      <summary><span>🔎 ابحث بالنوتات العطرية — اختر نوتة أو أكثر</span><span class="muted" id="sel-count"></span></summary>
+      <input id="note-q" class="input" type="search" placeholder="ابحث عن نوتة..." style="margin-top:12px;max-width:340px">
+      <div class="notes-pick" id="notes-pick"><div class="loader"></div></div>
+      <div class="selected-bar" id="selected-bar"></div>
+    </details>
+  </section>
+
+  <div class="result-head"><div id="count" class="muted"></div></div>
+  <div id="results"><div class="loader"></div></div>
+  <div class="center" style="margin:24px 0"><button id="more" class="btn btn-ghost hidden">عرض المزيد</button></div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
