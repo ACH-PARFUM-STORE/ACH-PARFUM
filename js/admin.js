@@ -178,7 +178,7 @@
         st.cells[KEY(o.concentration, o.size)] = { price: String(Number(o.price)), available: o.is_available };
       });
     } else {
-      st.concs = ['ضربة 1', 'ضربة 3', 'ضربة 6'];
+      st.concs = ['x1', 'x3', 'x6'];
       st.sizes = ['10ml', '30ml', '50ml', '100ml'];
     }
 
